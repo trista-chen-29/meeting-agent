@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.schemas import AnalyzeRequest, MeetingAnalysis
+from app.llm import analyze_transcript
 
 app = FastAPI(title="Meeting Agent API")
 
@@ -20,7 +21,11 @@ def health_check():
 
 @app.post("/analyze", response_model=MeetingAnalysis)
 async def analyze(body: AnalyzeRequest):
-    transcript = body.transcript
+    try:
+        result = await analyze_transcript(body.transcript)
+        return MeetingAnalysis(**result)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
 
     return MeetingAnalysis(
         meeting_topic="Rover Telemetry and Camera Sync",
