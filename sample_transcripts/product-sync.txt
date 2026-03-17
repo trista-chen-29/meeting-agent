@@ -1,0 +1,19 @@
+Nina: Quick update on the launch dashboard. The metrics page is almost done, but the retention chart still needs final validation.
+
+David: I will finish validating the retention chart by Thursday.
+
+Priya: We need to finalize the onboarding copy before launch. I can draft the final version tonight.
+
+Nina: Great. Let's lock onboarding copy tomorrow morning after Priya shares the draft.
+
+Ethan: The only blocker on my side is that the analytics event names are still inconsistent across screens.
+
+David: We should not launch the dashboard until those event names are cleaned up.
+
+Nina: Agreed. So decision: dashboard launch depends on analytics event cleanup.
+
+Priya: Who is owning the event name cleanup?
+
+Ethan: I can fix the event names, but I need the latest tracking spreadsheet first.
+
+Nina: Okay, Ethan owns event cleanup, and David finishes chart validation by Thursday. Priya sends onboarding copy tonight.

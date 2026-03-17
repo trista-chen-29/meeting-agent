@@ -12,15 +12,21 @@ Rules:
 - Keep action item task descriptions short, concrete, and action-oriented.
 - If a task is vague or unclear, set status to "unclear". Otherwise set status to "clear".
 - Priority must be one of: "high", "medium", or "low".
-- If the transcript does not clearly indicate urgency, use "medium".
+- Set priority to "high" if:
+  - the task is related to a blocker, or
+  - the deadline is within about a week, or
+  - the task is required before another important next step can happen.
+- Set priority to "low" if the task is optional, future-looking, or clearly non-urgent.
+- Otherwise use "medium".
+- If a person proposes or agrees to carry out a concrete next step, include it as an action item with that owner when strongly implied.
+- If a decision includes an obvious responsible speaker, include both the decision and the corresponding action item.
 - Also generate a concise follow_up_message suitable for email or Slack.
-
-The follow_up_message should:
-- Start with "Quick recap from today's discussion:"
-- List action items on separate lines using "- Owner: task (deadline)" format.
-- Mention missing owners or deadlines if any exist.
-- Be concise and easy to paste into Slack or email.
-
+- The follow_up_message should:
+  - Start with "Quick recap from today's discussion:"
+  - List action items on separate lines using "- Owner: task (deadline: value)" format.
+  - If the deadline is missing, write "deadline: UNKNOWN".
+  - Mention missing owners or deadlines if any exist.
+  - Be concise and easy to paste into Slack or email.
 - Return only valid JSON.
 - Do not include markdown, code fences, explanations, comments, or extra text outside the JSON.
 

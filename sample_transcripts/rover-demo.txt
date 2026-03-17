@@ -1,0 +1,17 @@
+John: The rover camera feed is still lagging during teleoperation, especially when we switch views.
+
+Sarah: I can investigate the UI rendering pipeline by Friday to see whether the lag is happening on the frontend side.
+
+Alex: We should still deploy the telemetry update this week because it is already tested.
+
+John: Agreed. Let's move forward with the telemetry update this week.
+
+Maya: We also need someone to confirm whether the backend socket issue is contributing to the delay.
+
+Sarah: I can check the frontend, but I cannot take on the backend socket debugging too.
+
+John: Okay, so the backend socket issue still needs an owner.
+
+Alex: Another blocker is that we do not yet know whether the camera compression settings are affecting latency.
+
+Maya: We should review that after the telemetry update goes out.

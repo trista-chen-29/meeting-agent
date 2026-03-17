@@ -1,0 +1,15 @@
+Chris: We should probably clean up the integration stuff before demo day.
+
+Taylor: Yeah, and someone needs to make the UI less confusing.
+
+Jordan: I think the login problem might still be happening for some users, but I am not fully sure.
+
+Chris: Let's also make sure the admin view works better.
+
+Taylor: We should follow up on the settings page too.
+
+Jordan: The database issue from last week may still be blocking part of the flow.
+
+Chris: Can somebody take a look at that soon?
+
+Taylor: Also, maybe we should update the help text if there is time.
