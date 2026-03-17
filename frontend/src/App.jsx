@@ -75,23 +75,6 @@ export default function App() {
     }
   };
 
-  const statusBadgeClass = (status) => {
-    switch ((status || "").toLowerCase()) {
-      case "clear":
-        return "bg-emerald-500/15 text-emerald-300 ring-1 ring-emerald-400/30";
-      case "missing_owner":
-      case "missing deadline":
-      case "missing_deadline":
-        return "bg-amber-500/15 text-amber-300 ring-1 ring-amber-400/30";
-      case "unclear":
-        return "bg-orange-500/15 text-orange-300 ring-1 ring-orange-400/30";
-      default:
-        return darkMode
-          ? "bg-slate-500/15 text-slate-300 ring-1 ring-slate-400/30"
-          : "bg-slate-200 text-slate-700 ring-1 ring-slate-300";
-    }
-  };
-
   const formatLabel = (value) => {
     return (value || "")
       .replaceAll("_", " ")
@@ -290,13 +273,6 @@ export default function App() {
                                 )}`}
                               >
                                 {formatLabel(item.priority)}
-                              </span>
-                              <span
-                                className={`rounded-full px-2.5 py-1 text-xs font-medium ${statusBadgeClass(
-                                  item.status
-                                )}`}
-                              >
-                                {formatLabel(item.status)}
                               </span>
                             </div>
                           </div>
